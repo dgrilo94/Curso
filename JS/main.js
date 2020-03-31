@@ -215,7 +215,7 @@ $(".total button").click('keypress',function(e) {
 
 
 
-    //hero a mudar na main page
+//hero a mudar na main page
 
 
 
@@ -233,30 +233,10 @@ $(".total button").click('keypress',function(e) {
     }, 4000);
 
 
-    // restição de items de acordo com o preço
-    $(".price").change(function () {
-
-        var min = parseInt($('[name="price"]').val());
-        var max = (min + 10);
-
-        if (min == 50) {
-            var max = 10000;
-        };
-
-        $('article').hide().filter(function () {
-            return $(this).data('price') >= min || $(this).data('price') <= max;
-        }).show();
-
-    }
-
-
-
-
-    );
 
     //validação de formulários
 
-    $("#name").on('keyup', function () {
+    $("#name").on('focusout', function () {
         if ($("#name").val() == "") {
             $(".warning").show();
         }
@@ -265,16 +245,27 @@ $(".total button").click('keypress',function(e) {
         }
     }
     );
-    $("#email").on('keyup', function () {
-        if ($("#email").is(':not(:contains("@"))')) {
-            $(".warning2").show();
+
+    $("#email").on('focusout', function () {
+        function isEmail(emailV){
+            if(emailV != null && emailV != undefined){
+                var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+                return pattern.test(emailV);    
+            }
+            else{
+                return false;
+            }
         }
-        else {
+
+        if (isEmail($("#email").val())) {
             $(".warning2").hide();
         }
-    }
-    );
-    $("#message").on('keyup', function () {
+        else {
+            $(".warning2").show();
+        }
+    });
+
+    $("#message").on('focusout', function () {
         if ($("#message").val() == "") {
             $(".warning").show();
         }
@@ -284,7 +275,7 @@ $(".total button").click('keypress',function(e) {
     }
     );
 
-    $("#lname").on('keyup', function () {
+    $("#lname").on('focusout', function () {
         if ($("#lname").val() == "") {
             $(".warning").show();
         }
@@ -293,7 +284,7 @@ $(".total button").click('keypress',function(e) {
         }
     });
 
-    $("#Address1").on('keyup', function () {
+    $("#Address1").on('focusout', function () {
         if ($("#Adress1").val() == "") {
             $(".warning").show();
         }
@@ -301,7 +292,7 @@ $(".total button").click('keypress',function(e) {
             $(".warning").hide();
         }
     });
-    $("#Address2").on('keyup', function () {
+    $("#Address2").on('focusout', function () {
 
         if ($("#Adress2").val() == "") {
             $(".warning").show();
@@ -311,7 +302,7 @@ $(".total button").click('keypress',function(e) {
         }
 
     });
-    $("#city").on('keyup', function () {
+    $("#city").on('focusout', function () {
 
         if ($("#city").val() == "") {
             $(".warning").show();
@@ -320,24 +311,24 @@ $(".total button").click('keypress',function(e) {
             $(".warning").hide();
         }
     });
-    $("#pcode").on('keyup', function () {
-
-        if ($("#pcode").val() == "" == "") {
-            $(".warning").show();
+    $("#pcode").on('focusout', function () {
+        if (($("#pcode").val().length == 8) && ($("#pcode").val().indexOf("-") !== -1)) {
+            $(".warning4").hide();
         }
         else {
-            $(".warning").hide();
+            $(".warning4").show();
         }
     });
 
-    $("#phoneNumber").on('keyup', function () {
-        if ($("#phoneNumber").val() == "" == "") {
-            $(".warning").show();
+    $("#phoneNumber").on('focusout', function () {
+        if ($("#phoneNumber").val().length != 9) {
+            $(".warning3").show();
         }
         else {
-            $(".warning").hide();
+            $(".warning3").hide();
         }
     });
+
 
     // cart
 

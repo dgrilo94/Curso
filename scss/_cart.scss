@@ -282,6 +282,8 @@
       @media screen and (max-width: 599px) {
         width: 80%;
       }
+      .warning4,
+      .warning3,
       .warning2,
       .warning {
         display: none;
@@ -289,6 +291,7 @@
         font-size: 20px;
         margin: auto;
         margin-bottom: 10px;
+        text-transform: uppercase;
       }
       h2 {
         text-align: center;
@@ -362,6 +365,9 @@
             margin-bottom: 16px;
             resize: none;
             display: inline-block;
+            &::placeholder{
+              color: $bordercolor;
+            }
           }
         }
       }
