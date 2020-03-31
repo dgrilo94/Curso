@@ -180,11 +180,12 @@
       .quantity {
         display: block;
         input[type="number"] {
+          display: block;
           width: 80%;
           position: relative;
           top: 50%;
           transform: translate(0, -50%);
-          @media screen and (max-width: 1366px) {
+          @media screen and (max-width: 540px) {
             top: 0;
             transform: translate(0);
             margin: auto;
@@ -264,6 +265,8 @@
         @media screen and (max-width: 540px) {
           display: block;
           margin: auto;
+          top: 0;
+          transform: translate(0);
         }
         &:hover {
           background-color: $btnhover;
