@@ -1,0 +1,450 @@
+.cart {
+  .wrapper {
+    .description {
+      margin-top: 100px;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $bordercolor;
+      @media screen and (max-width: 540px) {
+        display: none;
+      }
+      h4 {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #909090;
+      }
+      :nth-child(1) {
+        width: 115px;
+      }
+      :nth-child(2) {
+        flex: 2;
+      }
+      :nth-child(3) {
+        width: 100px;
+      }
+      :nth-child(4) {
+        width: 50px;
+      }
+      :nth-child(5) {
+        width: 50px;
+      }
+      :nth-child(6) {
+        width: 65px;
+      }
+      :nth-child(7) {
+        width: 30px;
+      }
+    }
+    .productCart {
+      display: flex;
+      height: 135px;
+      border-bottom: 1px solid $bordercolor;
+      @media screen and (max-width: 540px) {
+        flex-direction: column;
+        height: 100%;
+        border-top: 1px solid $bordercolor;
+        margin-top: 30px;
+      }
+      div:nth-child(2) {
+        flex: 2;
+        @media screen and (max-width: 540px) {
+          width: 100%;
+          flex: none;
+        }
+      }
+      div:nth-child(3) {
+        width: 100px;
+        @media screen and (max-width: 540px) {
+          width: 100%;
+        }
+      }
+      div:nth-child(4) {
+        width: 50px;
+        @media screen and (max-width: 540px) {
+          width: 100%;
+        }
+      }
+      div:nth-child(5) {
+        width: 50px;
+        @media screen and (max-width: 540px) {
+          width: 100%;
+        }
+      }
+      div:nth-child(6) {
+        width: 65px;
+        @media screen and (max-width: 540px) {
+          width: 100%;
+        }
+      }
+      :nth-child(7) {
+        width: 30px;
+        @media screen and (max-width: 540px) {
+          width: 100%;
+        }
+      }
+      .imgContainer {
+        width: 115px;
+        @media screen and (max-width: 540px) {
+          width: 100%;
+          margin-top: 15px;
+        }
+        img {
+          height: 100px;
+          width: 100px;
+          display: block;
+          position: relative;
+          top: 50%;
+          transform: translate(0, -50%);
+          @media screen and (max-width: 540px) {
+            top: 0;
+            transform: translate(0, 0);
+            display: block;
+            margin: auto;
+          }
+        }
+      }
+      div {
+        @media screen and (max-width: 540px) {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+        .details {
+          position: relative;
+          width: 100%;
+          top: 50%;
+          transform: translate(0, -50%);
+          @media screen and (max-width: 540px) {
+            top: 0;
+            transform: translate(0, 0);
+          }
+          h3 {
+            width: 100%;
+            font-weight: bold;
+            font-size: 14px;
+            color: $resultselectorcolor;
+            margin-bottom: 7px;
+            @media screen and (max-width: 540px) {
+              text-align: center;
+            }
+          }
+          h5 {
+            width: 100%;
+            font-size: 12px;
+            color: $gridhovercolor;
+            font-style: italic;
+            @media screen and (max-width: 540px) {
+              text-align: center;
+            }
+          }         
+        }
+      }
+    
+      div {
+        h4 {
+          display: block;
+          position: relative;
+          top: 50%;
+          transform: translate(0, -50%);
+          vertical-align: top;
+          @media screen and (max-width: 540px) {
+            top: 0;
+            transform: translate(0, 0);
+            text-align: center;
+            display: block;
+          }
+        }
+        .remove {
+          display: block;
+          position: relative;
+          width: 15px;
+          height: 15px;
+          background-image: url(/icons8-excluir.svg);
+          background-size: cover;
+          border: none;
+          background-color: $backgroundcolor;
+          vertical-align: top;
+          top: 50%;
+          transform: translate(0, -50%);
+          @media screen and (max-width: 540px) {
+            height: 30px;
+            width: 30px;
+            display: block;
+            margin: auto;
+            top: 0;
+            transform: translate(0);
+            border: 1px solid $bordercolor;
+          }
+        }
+      }
+      .quantity {
+        display: block;
+        input[type=number]{
+          width: 80%;
+          position: relative;
+          top: 50%;
+          transform: translate(0,-50%);
+        }
+      }
+    }
+    .total {
+      height: 60px;
+      width: 100%;
+      background-color: #f9f9f9;
+      margin-top: 5px;
+      div {
+        width: 185px;
+        margin-right: 0;
+        margin-left: auto;
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+        h3 {
+          display: inline-block;
+          font-weight: bold;
+          font-size: 14px;
+          color: #303030;
+          text-transform: capitalize;
+          vertical-align: top;
+        }
+        h2 {
+          display: inline-block;
+          font-weight: bold;
+          font-size: 14px;
+          color: #f68236;
+          margin-left: 30px;
+          vertical-align: top;
+        }
+      }
+    }
+    .order {
+      width: 100%;
+      height: 135px;
+      display: flex;
+      justify-content: space-between;
+      a {
+        h6 {
+          position: relative;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+      }
+      button {
+        margin-right: 0;
+        margin-left: auto;
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+        background: $highlightedfontcolor;
+        font-size: 14px;
+        border: #e67429;
+        border-width: 1px;
+        border-style: solid;
+        height: 45px;
+        width: 200px;
+        user-select: none;
+        color: $fontcolor;
+        font-family: lato;
+        cursor: pointer;
+        &:hover {
+          background-color: $btnhover;
+        }
+      }
+    }
+    .cartForm {
+      display: none;
+      width: 60%;
+      margin: auto;
+      margin-bottom: 35px;
+      margin-top: 90px;
+      @media screen and (max-width: 599px) {
+        width: 80%;
+      }
+      .warning2,
+      .warning{
+        display: none;
+        color: red;
+        font-size: 20px;
+        margin: auto;
+        margin-bottom: 10px;
+      }
+      h2 {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        font-size: 36px;
+        position: relative;
+        font-weight: 600;
+        padding-top: 70px;
+        text-transform: uppercase;
+        color: $resultselectorcolor;
+      }
+      p {
+        text-align: center;
+        width: 80%;
+        font-size: 18px;
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 100px;
+        font-style: italic;
+        color: $gridhovercolor;
+      }
+
+      label {
+        font-size: 12px;
+        color: $labelcolor;
+        text-transform: uppercase;
+        user-select: none;
+      }
+      input,
+      select {
+        width: 100%;
+        margin: auto;
+        display: block;
+        height: 40px;
+        padding: 12px;
+        border: 1px solid $bordercolor;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        font-size: 12px;
+      }
+      .twoInputs {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 1366px) {
+          flex-direction: column;
+        }
+        .twoInput {
+          position: relative;
+          width: calc(50% - 10px);
+          display: inline-block;
+          @media screen and (max-width: 1366px) {
+            width: 100%;
+          }
+          label {
+            font-size: 12px;
+            color: $labelcolor;
+            display: block;
+            text-transform: uppercase;
+            user-select: none;
+          }
+          input[type="text"] {
+            width: 100%;
+            height: 40px;
+            padding: 12px;
+            border: 1px solid $bordercolor;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: none;
+            display: inline-block;
+          }
+        }
+      }
+      .checkbox {
+        display: flex;
+        justify-content: center;
+        input[type="checkbox"] {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin: 0;
+        }
+        div {
+          label {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    .payment {
+      display: none;
+      padding-bottom: 100px;
+      h2 {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        font-size: 36px;
+        position: relative;
+        font-weight: 600;
+        padding-top: 70px;
+        text-transform: uppercase;
+        color: $resultselectorcolor;
+      }
+      p {
+        text-align: center;
+        width: 80%;
+        font-size: 18px;
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 100px;
+        font-style: italic;
+        color: $gridhovercolor;
+      }
+      div {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        h4 {
+          display: inline-block;
+          font-size: 18px;
+          color: $gridhovercolor;
+          text-transform: capitalize;
+        }
+        h3 {
+          display: inline-block;
+          margin-left: 20px;
+          font-size: 18px;
+          color: $gridhovercolor;
+        }
+      }
+      form {
+        width: 60%;
+        margin: auto;
+        margin-top: 90px;
+        @media screen and (max-width: 599px) {
+          width: 80%;
+        }
+        label {
+          font-size: 12px;
+          color: $labelcolor;
+          text-transform: uppercase;
+          user-select: none;
+        }
+        select {
+          width: 100%;
+          margin: auto;
+          display: block;
+          height: 40px;
+          padding: 12px;
+          border: 1px solid $bordercolor;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 40px;
+          font-size: 12px;
+        }
+        button {
+          display: block;
+          margin: auto;
+          background: $highlightedfontcolor;
+          font-size: 14px;
+          border: #e67429;
+          border-width: 1px;
+          border-style: solid;
+          height: 45px;
+          width: 200px;
+          user-select: none;
+          color: white;
+          font-family: lato;
+          text-transform: uppercase;
+          cursor: pointer;
+          &:hover {
+            background-color: $btnhover;
+          }
+        }
+      }
+    }
+  }
+}

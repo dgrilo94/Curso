@@ -1,0 +1,103 @@
+.product {
+  .productinfo {
+    width: 100%;
+    border-bottom-color: $bordercolor;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    .imgContainer{
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    h2{
+        text-align: center;
+        font-weight: bold;
+        font-size: 36px;
+        margin-top: 65px;
+
+    }
+    h5{
+        text-align: center;
+        font-size: 14px;
+        font-style: italic;
+        color: #a3a3a3;
+        margin-top: 15px;
+    }
+    h3{
+        text-align: center;
+        font-size: 18px;
+        font-style: italic;
+        color: $gridhovercolor;
+        margin-top: 20px;
+    }
+    p{
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 35px;
+    }
+    h4{
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .sizeSelectorContainer{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        height: 32px;
+        margin-top: 20px;
+        .sizeSelector{
+            width: 32px;
+            border: solid $bordercolor 1px;
+            margin-left: 5px;
+            margin-right: 5px;
+            h6{
+                text-align: center;
+                font-size: 14px;
+                position: relative;
+                top: 50%;
+                transform: translate(0,-50%);
+            }
+
+        }
+        .pressed{
+            border: solid red 1px;
+        }
+    }
+
+
+    button{
+        display: block;
+        background: $highlightedfontcolor;
+        color: $fontcolor;
+        font-size: 14px;
+        font-weight: bold;
+        border: #e67429;
+        border-width: 1px;
+        border-style: solid;
+        height: 45px;
+        width: 200px;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 75px;
+        font-family: Lato;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover {
+          background-color: $btnhover;
+        }
+    }
+  }
+}
+

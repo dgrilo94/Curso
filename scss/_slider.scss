@@ -1,0 +1,64 @@
+.suggestion {
+  h4 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-style: italic;
+  }
+  .wrapper {
+    background-color: $slidercolor;
+    position: relative;
+    .prev {
+      height: 150px;
+      width: 45px;
+      position: absolute;
+      display: inline-block;
+      z-index: 200;
+
+      img {
+        height: 45px;
+        width: 45px;
+        margin-top: 52.5px;
+        margin-bottom: 52.5px;
+      }
+      &:hover {
+        background-color: $sliderhoverbtn;
+      }
+    }
+    .next {
+      height: 150px;
+      width: 45px;
+      position: absolute;
+      display: inline-block;
+      right: 0px;
+      top: 0px;
+      z-index: 200;
+      img {
+        height: 45px;
+        width: 45px;
+        margin-top: 52.5px;
+        margin-bottom: 52.5px;
+      }
+      &:hover {
+        background-color: $sliderhoverbtn;
+      }
+    }
+
+    .slider {
+      position: relative;
+      width: calc(100% - 90px);
+      display: flex;
+      margin: auto;
+      .suggesteditem {
+        height: 150px;
+        width: auto;
+        img {
+          height: 150px;
+          width: auto;
+          margin: auto;
+        }
+      }
+    }
+  }
+}

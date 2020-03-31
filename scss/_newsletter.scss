@@ -1,0 +1,84 @@
+.newsletter {
+  position: relative;
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  div {
+    max-width: 1200px;
+    width: 100%;
+    height: 450px;
+    padding: 6%;
+    @media screen and (max-width: 756px) {
+      height: calc(100vh);
+    }
+    h2 {
+      top: 60px;
+      position: relative;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 36px;
+      font-weight: bold;
+      @media screen and (max-width: 756px) {
+        font-size: 30px;
+        margin-bottom: 5%;
+        margin-top: 25vh;
+      }
+    }
+
+    p {
+      top: 80px;
+      position: relative;
+      text-align: center;
+      font-size: 18px;
+      font-style: italic;
+      @media screen and (max-width: 756px) {
+        font-size: 14px;
+      }
+    }
+
+    .form {
+      position: relative;
+      margin: auto;
+      font-size: 0;
+      top: 145px;
+      width: 530px;
+      @media screen and (max-width: 756px) {
+        width: 80%;
+      }
+      input[type="text"] {
+        display: inline-block;
+        font-size: 14px;
+        border: $bordercolor;
+        border-width: 1px;
+        border-style: solid;
+        border-right-style: none;
+        height: 45px;
+        width: 450px;
+        padding-left: 17px;
+        @media screen and (max-width: 756px) {
+          width: calc(100% - 80px);
+        }
+      }
+
+      button {
+        display: inline-block;
+        background: $highlightedfontcolor;
+        border: #e67429;
+        border-width: 1px;
+        border-style: solid;
+        height: 45px;
+        width: 80px;
+        user-select: none;
+        color: $fontcolor;
+        font-family: Lato;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover {
+          background-color: grey;
+        }
+      }
+    }
+  }
+}

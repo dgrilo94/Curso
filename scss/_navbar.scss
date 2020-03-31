@@ -1,0 +1,23 @@
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+    margin-left: 5px;
+    margin-right: 5px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  a:first-child {
+    @media screen and (max-width: 1200px) {
+      margin-left: 20px;
+    }
+  }
+}

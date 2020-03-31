@@ -1,0 +1,587 @@
+header {
+  max-width: 1200px;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom-color:$bordercolor;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px;
+  @media screen and (max-width: 1366px) {
+    justify-content: space-around;
+  }
+  .logo {
+    display: inline-block;
+    margin-right: 55px;
+    position: relative;
+    vertical-align: top;
+    a {
+      background-color: black;
+      height: 40px;
+      width: 40px;
+      display: inline-block;
+      border: 0px;
+
+      &:hover {
+        background-color: grey;
+        border: black;
+        border-style: solid;
+        border-width: 1px;
+      }
+
+      h1 {
+        top: 50%;
+        position: relative;
+        display: inline-block;
+        transform: translateY(-50%) translateX(-50%);
+        left: 50%;
+        color: blanchedalmond;
+        font-size: 14px;
+        vertical-align: super;
+      }
+    }
+  }
+  .Menu {
+    display: none;
+    background-image: url(/icons8-cardápio.svg);
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    @media screen and (max-width: 1366px) {
+      display: inline-block;
+    }
+  }
+
+  nav {
+    height: 40px;
+    margin: auto;
+    display: inline-block;
+    vertical-align: top;
+    flex: 3;
+    user-select: none;
+    @media screen and (min-width: 756px) and (max-width: 1366px) {
+      flex: 2;
+    }
+    ul {
+      display: inline-block;
+      li {
+        display: inline-block;
+        margin-right: 25px;
+        height: 40px;
+
+        a {
+          position: relative;
+          text-decoration: none;
+          text-align: center;
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          &:hover {
+            text-decoration: underline;
+          }
+          h5 {
+            position: relative;
+            color: black;
+            text-align: center;
+            top: 50%;
+            transform: translate(0, -50%);
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .loginbtn,
+  .basketbtn {
+    height: 40px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    user-select: none;
+    a {
+      position: relative;
+      text-decoration: none;
+      padding-left: 25px;
+      padding-right: 25px;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      font-size: 0;
+      @media screen and (min-width: 756px) and (max-width: 1366px) {
+        width: 40px;
+        padding: 0;
+        margin: 0;
+      }
+      img {
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        top: 50%;
+        transform: translate(0, -50%);
+        @media screen and (min-width: 756px) and (max-width: 1366px) {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      h5 {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        margin-left: 5px;
+        font-size: 14px;
+        top: 50%;
+        transform: translate(0, -50%);
+        @media screen and (max-width: 1366px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .pressed {
+    border: $bordercolor solid 1px;
+    border-bottom: 1px solid #ffffff00;
+    z-index: 350;
+    background-color: $backgroundcolor;
+  }
+
+  .basketbtn {
+    margin-right: 30px;
+  }
+  .search {
+    display: inline-block;
+    height: 50px;
+    font-size: 0;
+    vertical-align: top;
+    transition: 1s ease-in;
+    &:hover {
+      input {
+        display: inline-block;
+        width: 200px;
+        border-style: solid;
+        border-width: 1px;
+        border-right: 0;
+        padding-left: 10px;
+
+        @media screen and (max-width: 1366px) {
+          display: none;
+        }
+      }
+    }
+
+    input {
+      height: 40px;
+      width: 0px;
+      position: relative;
+      font-size: 16px;
+      border: 0;
+      border-color: $bordercolor;
+      transition: 1s ease-in;
+      &::placeholder {
+      }
+    }
+    a {
+      height: 40px;
+      width: 40px;
+      border-style: solid;
+      border-color: $bordercolor;
+      border-width: 1px;
+      position: relative;
+      display: inline-block;
+      background-image: url(/search.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+      background-color: $backgroundcolor;
+      &:hover {
+        background-color: $gridhovercolor;
+        background-image: url(/searchhover.svg);
+        @media screen and (max-width: 1366px) {
+          background-color: $backgroundcolor;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  height: calc(100% - 70px);
+  display: none;
+  position: absolute;
+  bottom: 0;
+  z-index: 300;
+  @media screen and (max-width: 1366px) {
+    height: calc(100% - 70px);
+    left: 0;
+    transform: translate(0);
+    bottom: 1px;
+  }
+  .container2 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: auto;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 300;
+    position: absolute;
+    bottom: 0;
+
+    .basket,
+    .login {
+      width: 35%;
+      right: -60%;
+      border: $bordercolor solid 1px;
+      background-color: $backgroundcolor;
+      display: none;
+      cursor: default;
+      z-index: 600;
+      position: relative;
+      bottom: 1px;
+      padding: 30px;
+      @media screen and (max-width: 1366px) {
+        width: 100%;
+        height: 100%;
+        right: 0;
+        bottom: 0px;
+      }
+      .closeContainer {
+        display: none;
+        width: 80%;
+        margin: auto;
+        margin-top: 5vh;
+        @media screen and (max-width: 1366px) {
+          display: block;
+        }
+        img {
+          display: block;
+          height: 40px;
+          width: 40px;
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  .login {
+    height: 300px;
+    form {
+      padding-top: 15px;
+      @media screen and (max-width: 1366px) {
+        padding-top: 15vh;
+      }
+      input {
+        display: block;
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+        @media screen and (max-width: 1366px) {
+          margin-top: 40px;
+        }
+        @media screen and (max-width: 1366px) {
+          width: 100%;
+        }
+      }
+      input[type="password"],
+      input[type="email"] {
+        height: 40px;
+        padding-left: 10px;
+        font-size: 15px;
+      }
+      input[type="submit"] {
+        margin-top: 30px;
+        background: $highlightedfontcolor;
+        font-size: 12px;
+        height: 32px;
+        border: #e67429;
+        border-width: 1px;
+        border-style: solid;
+        user-select: none;
+        cursor: pointer;
+        color: $backgroundcolor;
+        font-family: Lato;
+        text-transform: uppercase;
+        @media screen and (max-width: 1366px) {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}
+
+.basket {
+  max-height: 500px;
+  @media screen and (max-width: 1366px) {
+    max-height: none;
+  }
+  .productCartContainer {
+    @media screen and (max-width: 1366px) {
+      margin-top: 5vh;
+      height: calc(100% - 160px - 5vh);
+    }
+    .productCart {
+      height: 90px;
+      width: 100%;
+      border-bottom: solid 1px $bordercolor;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      display: flex;
+      img {
+        display: inline-block;
+        position: relative;
+        height: 50px;
+        width: 50px;
+        top: 50%;
+        transform: translate(0, -50%);
+        margin-right: 5%;
+      }
+      h4 {
+        position: relative;
+        vertical-align: top;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        padding-right: 10px;
+      }
+
+      :nth-child(2) {
+        flex: 2;
+        font-weight: bold;
+        height: 50px;
+        vertical-align: middle;
+        line-height: 20px;
+      }
+      button {
+        display: inline-block;
+        position: relative;
+        width: 14px;
+        height: 14px;
+        background-image: url("/icons8-excluir.svg");
+        background-size: cover;
+        border: none;
+        background-color: $backgroundcolor;
+        vertical-align: top;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+    :last-child {
+      @media screen and (max-width: 1366px) {
+        border: none;
+      }
+    }
+  }
+
+  .total {
+    display: block;
+    height: 70px;
+    width: 100%;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    @media screen and (max-width: 1366px) {
+      border-top: solid 1px $bordercolor;
+    }
+    @media screen and (min-width: 757px) and (max-width: 1366px) {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+
+    h4 {
+      display: inline-block;
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      @media screen and (min-width: 757px) and (max-width: 1366px) {
+        top: 0;
+        transform: translate(0, 0);
+        margin-top: 10px;
+      }
+    }
+    button {
+      height: 32px;
+      width: 113px;
+      display: inline-block;
+      float: right;
+      background: $highlightedfontcolor;
+      font-size: 12px;
+      border: #e67429;
+      border-width: 1px;
+      border-style: solid;
+      user-select: none;
+      cursor: pointer;
+      color: $backgroundcolor;
+      font-family: Lato;
+      text-transform: uppercase;
+      @media screen and (min-width: 757px) and (max-width: 1366px) {
+        display: block;
+        float: none;
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.containerMenu {
+  display: none;
+  position: fixed;
+  z-index: 500;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  background-color: $backgroundcolor;
+  border: 1px solid $bordercolor;
+  overflow-x: hidden;
+  .hamMenu,
+  .searchMenu {
+    display: none;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    .menuContainer {
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+    .close {
+      margin: auto;
+      display: block;
+      height: 50px;
+      width: 50px;
+      background-image: url(/icons8-cancelar.svg);
+      background-position: center;
+    }
+  }
+  .hamMenu {
+    nav {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      ul {
+        margin: auto;
+        li {
+          margin-top: 40px;
+          a {
+            text-align: center;
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: bold;
+          }
+        }
+        li:first-child {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+
+  .searchMenu {
+    display: none;
+    .menuContainer {
+      .searchInput {
+        display: block;
+        width: 90%;
+        height: 50px;
+        margin: auto;
+        border: solid black 1px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 20px;
+        ::placeholder {
+        }
+      }
+      button {
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        margin-top: 6vh;
+        display: block;
+        background-image: url(/searchhover.svg);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #000000;
+        border: 1px solid #ffffff00;
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  header {
+    border-bottom-style: none;
+    nav {
+      display: none;
+      ul {
+        display: block;
+        li {
+          display: block;
+          a {
+            text-decoration: none;
+            text-align: center;
+            h5 {
+              position: relative;
+              color: black;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    .loginbtn,
+    .basketbtn {
+      width: 40px;
+      padding: 0;
+      margin: 0;
+      a {
+        padding: 0;
+        h5 {
+          display: none;
+        }
+        img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+  .logbasket {
+    flex: 1;
+    height: 50px;
+    margin: auto;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+      img {
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+        position: relative;
+        top: 11%;
+        margin-right: 3%;
+      }
+      h5 {
+        display: none;
+      }
+    }
+  }
+}

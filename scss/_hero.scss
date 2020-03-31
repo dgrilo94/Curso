@@ -1,0 +1,117 @@
+.hero {
+  margin-bottom: 60px;
+  .wrapper {
+    height: 550px;
+    @media screen and (max-width: 756px) {
+      height: calc(100vh - 100px);
+    }
+
+    .slideHero {
+      position: absolute;
+
+      height: 550px;
+      max-width: 1200px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      @media screen and (max-width: 756px) {
+        height: calc(100vh - 100px);
+      }
+      article {
+        padding-left: 5%;
+        padding-right: 5%;
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        @media screen and (max-width: 756px) {
+          padding-left: 10%;
+          padding-right: 10%;
+        }
+        h1 {
+          text-align: center;
+          margin: auto;
+          font-size: 72px;
+          position: relative;
+          font-weight: 600;
+          text-transform: uppercase;
+          color: $fontcolor;
+          user-select: none;
+          text-shadow: 5px 3px 9px black;
+          @media screen and (max-width: 756px) {
+            font-size: 40px;
+            margin-bottom: 10%;
+          }
+        }
+
+        p {
+          text-align: center;
+          width: 65%;
+          margin: auto;
+          font-size: 24px;
+          top: 10%;
+          margin: auto;
+          padding: 30px;
+          line-height: 34px;
+          color: $fontcolor;
+          user-select: none;
+          text-shadow: 3px 5px 8px black;
+          @media screen and (max-width: 756px) {
+            width: 100%;
+          }
+        }
+        .btn {
+          position: relative;
+          height: 55px;
+          width: 230px;
+          margin: auto;
+          display: block;
+          text-align: center;
+          border: $bordercolor;
+          border-style: solid;
+          border-width: 1px;
+          text-decoration: none;
+          background-color: $backgroundcolor;
+          user-select: none;
+          
+          @media screen and (max-width: 756px) {
+            margin-top: 10%;
+          }
+          &:hover {
+            background-color: $btnhover;
+          }
+        
+          h5 {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            color: black;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-family: lato;
+            font-weight: bold;
+          }
+        }
+        
+      }
+    }
+    .heroSlide1 {
+      background-image: url(/spring.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .heroSlide2 {
+      background-image: url(/summer.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .heroSlide3 {
+      background-image: url(/winter.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
