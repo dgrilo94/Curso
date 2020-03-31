@@ -205,7 +205,7 @@ jQuery(document).ready(function () {
 //botao de checkout
 
 $(".total button").click('keypress',function(e) {
-        $(location).attr('href','/05 Shopping cart.html');
+        $(location).attr('href','05 Shopping cart.html');
 });
 
 
