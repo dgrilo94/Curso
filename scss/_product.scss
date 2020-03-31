@@ -6,8 +6,10 @@
     border-bottom-width: 1px;
     .imgContainer{
       width: 100%;
-      height: 500px;
       overflow: hidden;
+      @media screen and (min-width: 600px) {
+        height: 500px;
+      }
       img {
         width: 100%;
         height: 100%;
