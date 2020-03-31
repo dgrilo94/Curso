@@ -47,7 +47,7 @@ header {
   }
   .Menu {
     display: none;
-    background-image: url("icons8-cardápio.svg");
+    background-image: url(icons8-cardápio.svg);
     background-position: center;
     width: 40px;
     height: 40px;
@@ -196,14 +196,14 @@ header {
       border-width: 1px;
       position: relative;
       display: inline-block;
-      background-image: url("search.svg");
+      background-image: url(search.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: auto;
       background-color: $backgroundcolor;
       &:hover {
         background-color: $gridhovercolor;
-        background-image: url("searchhover.svg");
+        background-image: url(searchhover.svg);
         @media screen and (max-width: 1366px) {
           background-color: $backgroundcolor;
         }
@@ -366,7 +366,7 @@ header {
         position: relative;
         width: 14px;
         height: 14px;
-        background-image: url("icons8-excluir.svg");
+        background-image: url(icons8-excluir.svg);
         background-size: cover;
         border: none;
         background-color: $backgroundcolor;
@@ -457,7 +457,7 @@ header {
       display: block;
       height: 50px;
       width: 50px;
-      background-image: url("icons8-cancelar.svg");
+      background-image: url(icons8-cancelar.svg);
       background-position: center;
     }
   }
@@ -507,7 +507,7 @@ header {
         margin: auto;
         margin-top: 6vh;
         display: block;
-        background-image: url("searchhover.svg");
+        background-image: url(searchhover.svg);
         background-size: 30px;
         background-repeat: no-repeat;
         background-position: center;
