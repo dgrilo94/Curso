@@ -212,8 +212,8 @@ jQuery(document).ready(function () {
     setInterval(function () {
         $('.hero .wrapper > div:first')
             .fadeOut()
-            .next(1333)
-            .fadeIn(1500)
+            .next(1000)
+            .fadeIn(1000)
             .end()
             .appendTo('.hero .wrapper');
     }, 4000);
