@@ -135,7 +135,7 @@ jQuery(document).ready(function () {
                 else {
                     $('.search input').removeAttr("style");
                 }
-            }).children().click(function (e) {
+            }).children().children().click(function (e) {
                 return false;
             });
     }
