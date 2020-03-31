@@ -182,13 +182,13 @@ jQuery(document).ready(function () {
 if ($(window).width() >= 1366) {
     $(".search input").on('keypress',function(e) {
         if(e.which == 13) {
-            $(location).attr('href','/08 SearchResults.html');
+            $(location).attr('href','08 SearchResults.html');
         }
     });
 }
 if ($(window).width() < 1366) {
     $(".menuContainer button").click(function(e) {
-            $(location).attr('href','/08 SearchResults.html');
+            $(location).attr('href','08 SearchResults.html');
     });
 }
     //impedir o scrolling quandos os menus estao abertos
