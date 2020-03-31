@@ -179,14 +179,20 @@ jQuery(document).ready(function () {
     );
 
     //pesquisar ao clicar no enter no search input
-    if ($(window).width() >= 1366) {
+if ($(window).width() >= 1366) {
     $(".search input").on('keypress',function(e) {
         if(e.which == 13) {
             $(location).attr('href','/08 SearchResults.html');
         }
     });
 }
-
+if ($(window).width() < 1366) {
+    $(".menuContainer button").on('keypress',function(e) {
+        if(e.which == 13) {
+            $(location).attr('href','/08 SearchResults.html');
+        }
+    });
+}
     //impedir o scrolling quandos os menus estao abertos
     $('.containerMenu').on('scroll touchmove mousewheel', function (e) {
 
