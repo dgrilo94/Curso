@@ -201,6 +201,16 @@ jQuery(document).ready(function () {
     }, false);
 
 
+
+//botao de checkout
+
+$(".total button").click('keypress',function(e) {
+        $(location).attr('href','/05 Shopping cart.html');
+});
+
+
+
+
     //hero a mudar na main page
 
 
