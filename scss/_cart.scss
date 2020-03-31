@@ -136,10 +136,10 @@
             @media screen and (max-width: 540px) {
               text-align: center;
             }
-          }         
+          }
         }
       }
-    
+
       div {
         h4 {
           display: block;
@@ -179,11 +179,18 @@
       }
       .quantity {
         display: block;
-        input[type=number]{
+        input[type="number"] {
           width: 80%;
           position: relative;
           top: 50%;
-          transform: translate(0,-50%);
+          transform: translate(0, -50%);
+          @media screen and (max-width: 1366px) {
+            top: 0;
+            transform: translate(0);
+            margin: auto;
+            width: 50px;
+            display: block;
+          }
         }
       }
     }
@@ -222,11 +229,19 @@
       height: 135px;
       display: flex;
       justify-content: space-between;
+      @media screen and (max-width: 540px) {
+        flex-direction: column;
+      }
       a {
         h6 {
           position: relative;
           top: 50%;
           transform: translate(0, -50%);
+          color: black;
+        }
+        @media screen and (max-width: 540px) {
+          display: block;
+          margin: auto;
         }
       }
       button {
@@ -246,6 +261,10 @@
         color: $fontcolor;
         font-family: lato;
         cursor: pointer;
+        @media screen and (max-width: 540px) {
+          display: block;
+          margin: auto;
+        }
         &:hover {
           background-color: $btnhover;
         }
@@ -261,7 +280,7 @@
         width: 80%;
       }
       .warning2,
-      .warning{
+      .warning {
         display: none;
         color: red;
         font-size: 20px;
