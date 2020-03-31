@@ -187,10 +187,8 @@ if ($(window).width() >= 1366) {
     });
 }
 if ($(window).width() < 1366) {
-    $(".menuContainer button").on('keypress',function(e) {
-        if(e.which == 13) {
+    $(".menuContainer button").click(function(e) {
             $(location).attr('href','/08 SearchResults.html');
-        }
     });
 }
     //impedir o scrolling quandos os menus estao abertos
