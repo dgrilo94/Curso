@@ -222,8 +222,8 @@ $(".total button").click('keypress',function(e) {
     setInterval(function () {
         $('.hero .wrapper > div:first')
             .fadeOut()
-            .next(1000)
-            .fadeIn(1000)
+            .next()
+            .fadeIn()
             .end()
             .appendTo('.hero .wrapper');
     }, 4000);
