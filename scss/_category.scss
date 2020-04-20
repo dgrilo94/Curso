@@ -1,12 +1,12 @@
 // category all
 
 .category {
-  border-bottom: $bordercolor solid 1px;
   .wrapper {
     width: 100%;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    border-bottom: $bordercolor solid 1px;
     .hero3 {
       margin-top: 40px;
       margin-bottom: 50px;
